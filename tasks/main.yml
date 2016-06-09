@@ -1,0 +1,17 @@
+---
+# tasks file for epel-repo
+- when: ansible_os_family == "RedHat" 
+  block:
+
+  - name: Add EPEL release repository [RHEL/CentOS]
+    yum:
+      name: 'epel-release'
+      state: latest
+    when: epel_repo_release
+
+  - name: Add EPEL testing repository [RHEL/CentOS]
+    yum:
+      name: 'epel-release'
+      state: latest
+    when: epel_repo_testing
+

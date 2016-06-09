@@ -1,0 +1,4 @@
+---
+# defaults file for epel-repo
+epel_repo_release: True
+epel_repo_testing: False
