@@ -5,7 +5,7 @@ dependencies: []
 galaxy_info:
   author: tima
   description: EPEL release and/or testing repository setup on RedHat/CentOS OS family servers
-  license: BSD
+  license: Apache
   min_ansible_version: 2.1
   platforms:
     - name: EL

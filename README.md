@@ -50,7 +50,7 @@ please open an issue through Github.
 
 ## License
 
-BSD
+Apache
 
 ## Author
 
