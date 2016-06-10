@@ -1,38 +1,57 @@
-Role Name
-=========
+# Ansible Role: epel-repo
 
-A brief description of the role goes here.
+[![Build Status](https://travis-ci.org/tima/ansible-role-epel-repo.svg?branch=master)](https://travis-ci.org/tima/ansible-role-epel-repo)
 
-Requirements
-------------
+Sets up EPEL release and/or testing repository on RedHat/CentOS OS family servers. 
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Uses the epel-release and epel-testing yum packages.
 
-Role Variables
---------------
+This role handles skipping its tasks for other OS types.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+## Requirements
 
-Dependencies
-------------
+None
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+## Role Variables
 
-Example Playbook
-----------------
+Available variables are listed below with default values (see `defaults/main.yml`):
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+    epel_repo_release: True
+
+This boolean variable enables the setup of the EPEL release (stable) repository.
+
+    epel_repo_testing: False
+
+This boolean variable enables the setup of the EPEL testing repository.
+
+## Dependencies
+
+None
+
+## Example Playbook
+
+The most basic usage of this role in a play is as follows:
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - role: 'tima.epel-repo'
 
-License
--------
+To setup the EPEL release and testing channels:
+
+    - hosts: servers
+      roles:
+         - role: 'tima.epel-repo'
+           epel_repo_testing: True
+
+## Contributions and Feedback
+
+Any contributions are welcome. For any bugs or feature requests,
+please open an issue through Github.
+
+## License
 
 BSD
 
-Author Information
-------------------
+## Author
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Created by [Timothy Appnel](https://github.com/tima).
