@@ -1,4 +1,6 @@
 ---
 # defaults file for epel-repo
 epel_repo_release: True
+epel_repo_release_state: present
 epel_repo_testing: False
+epel_repo_testing_state: present

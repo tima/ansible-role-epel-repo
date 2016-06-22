@@ -20,9 +20,18 @@ Available variables are listed below with default values (see `defaults/main.yml
 
 This boolean variable enables the setup of the EPEL release (stable) repository.
 
+    epel_repo_release_state: present
+
+The yum state of the epel-release package on the host.
+
     epel_repo_testing: False
 
 This boolean variable enables the setup of the EPEL testing repository.
+
+    epel_repo_testing_state: present
+
+The yum state of the epel-testing package on the host.
+
 
 ## Dependencies
 

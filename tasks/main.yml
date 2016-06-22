@@ -6,12 +6,12 @@
   - name: Add EPEL release repository [RHEL/CentOS]
     yum:
       name: 'epel-release'
-      state: latest
+      state: "{{ epel_repo_release_state }}"
     when: epel_repo_release
 
   - name: Add EPEL testing repository [RHEL/CentOS]
     yum:
       name: 'epel-release'
-      state: latest
+      state: "{{ epel_repo_testing_state }}"
     when: epel_repo_testing
 
